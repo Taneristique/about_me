@@ -1,0 +1,172 @@
+/*Important css animation will not work in Mozilla browser and via -webkit prefix it will work on mozilla and probably all of webkit browsers but i am not sure about Safari.Please let me know
+as opening a bug if it does not work on your browser in case you do not use mozilla because I have nothing to do with it*/
+:root{
+    --background: rgb(226, 205, 113);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0 auto;
+    background-color: #000000;
+}
+.banner{
+    height: 35vh;
+    background-image: url('../images/me.JPG');
+    background-color: var(--background);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    color:#ffffff;
+    
+}
+.header{
+    display: inline-flex;
+    opacity: 40%;
+}
+.container{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/kissirki.JPG');
+
+    background-size: contain;
+    background-repeat: round;
+}
+.item{
+    width:60%;
+    height: auto;
+    background-color: #ffffff;
+    display: grid;
+    place-items: center;
+    grid-template-columns:repeat(3,40%);
+    grid-column-start: 1;
+}
+
+.author_image{
+    display: inline-grid;
+    width: 25%;
+    height: 25vh;
+    clip-path: circle();
+    background-color: rgb(0, 0, 0);   
+    background-image: url("../images/sansmot.JPG");
+    background-size:contain;
+    background-position:center;
+}
+.explanation{
+    font-size: 1.2em;
+    color: #000000;
+}
+
+footer{
+    position: relative;
+    top:5px;
+    color:#ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cv{
+    display: grid;
+    place-items: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end:3;
+    
+}
+
+img{
+    margin-top: 5vh;
+    margin-left: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-device-width:600px) { /*for small phones*/
+.author_image{
+    width: 60%;
+    height: 30vh;
+    position:relative;
+    left:-16px;
+    object-fit: cover;
+    z-index: 1; 
+
+}
+}
+
+
+.carousell_container{
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/kissirki.JPG');
+}
+#cimages{
+    border-radius: 20px;
+    z-index: 500;
+    border:10px groove var(--background);
+    position: relative;
+    right: 11px; 
+    bottom: 5px;
+    animation: change 10000ms linear  1000ms infinite alternate;
+    -webkit-animation: change 10000ms linear  1000ms infinite alternate;
+   /* -moz-animation: change 10000ms linear  1000ms infinite alternate; Animation for morzilla firefox browser but this is obsolete Mozilla browser currently does not support css animations*/
+    width: 50rem;
+    height: 50vh;
+}
+
+@keyframes change {
+  0%   {background-image: url("../images/past.JPG");}
+  15%  {content: url("../images/abstract.JPG");}
+  25%  {content: url("../images/beerexistentialist.JPG");}
+  35%  {content: url("../images/abstractions.JPG"); }
+  45%   {content: url("../images/orsay.JPG");}
+  55%  {content:url("../images/mezarfotografciligi.JPG");}
+  65%{content: url("../images/salut.JPG");}
+  75%{content: url("../images/sansmot.JPG")}
+  85%{content: url("../images/perspektive.JPG");}
+  95%{content: url("../images/montrouge.JPG");}
+  100%{content: url("../images/athmosfer.JPG");}
+
+
+}
+
+@-webkit-keyframes change{
+    0%   {background-image: url("../images/past.JPG");}
+    15%  {content: url("../images/abstract.JPG");}
+    25%  {content: url("../images/beerexistentialist.JPG");}
+    35%  {content: url("../images/abstractions.JPG"); }
+    45%   {content: url("../images/orsay.JPG");}
+    55%  {content:url("../images/mezarfotografciligi.JPG");}
+    65%{content: url("../images/salut.JPG");}
+    75%{content: url("../images/sansmot.JPG")}
+    85%{content: url("../images/perspektive.JPG");}
+    95%{content: url("../images/montrouge.JPG");}
+    100%{content: url("../images/athmosfer.JPG");}
+}
+ 
+/*@-moz-keyframes change { /*If you have 16.0 version of firefox it will work but in my version this does not work
+  0%   {background-image: url("../images/past.JPG");}
+  15%  {content: url("../images/abstract.JPG");}
+  25%  {content: url("../images/beerexistentialist.JPG");}
+  35%  {content: url("../images/abstractions.JPG"); }
+  45%   {content: url("../images/orsay.JPG");}
+  55%  {content:url("../images/mezarfotografciligi.JPG");}
+  65%{content: url("../images/salut.JPG");}
+  75%{content: url("../images/sansmot.JPG")}
+  85%{content: url("../images/perspektive.JPG");}
+  95%{content: url("../images/montrouge.JPG");}
+  100%{content: url("../images/athmosfer.JPG");}
+}
+Mozilla currently does not support CSS Animations.
+
+*/
+audio{
+    outline: none;
+    position: inherit;
+}

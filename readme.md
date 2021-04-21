@@ -1,0 +1,1 @@
+I did this to better understand grid and this was my first try to do carousel with pure css,look at the footer when you open html files I downloaded and added Chopin's musics for you.No license this time because this is a template for my individual work:)
